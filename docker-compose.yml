@@ -4,9 +4,9 @@ services:
     container_name: mi-postgres-db-Arturo
     restart: always
     environment:
-      POSTGRES_USER: artuurx
-      POSTGRES_PASSWORD: 1234
-      POSTGRES_DB: moviesdb
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
     ports:
       - "5432:5432"
     volumes:
