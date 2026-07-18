@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+app.use(express.json()); //leer el json
 const PORT = 3000;
 
 // Tu primera ruta (El mostrador de recepción)
@@ -11,3 +12,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor encendido y escuchando en el puerto ${PORT}`);
 }); 
+
