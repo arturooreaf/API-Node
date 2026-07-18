@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:17
+    container_name: mi-postgres-db-Arturo
+    restart: always
+    environment:
+      POSTGRES_USER: artuurx
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: moviesdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
